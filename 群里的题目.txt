@@ -1,0 +1,989 @@
+6384.下面程序的功能是把316表示为两个加数的和,
+使两个加数分别能被13和11整除,
+在划线处应填入的选项是(   ).
+
+#include<iostream>
+using namespace std;
+
+void main()
+{ 
+int i=0,j,k;
+do{ i++;k=316-13*i;} while(_____);
+j=k/11;        
+cout << "316=13*"<<i<<"+11*"<< j;
+}
+
+A.k/11   B.k%11   C.k/11==0   D.k%11==0
+
+
+///B
+
+
+
+
+6218.下面程序的功能是计算正整数2345的各位数字平方和，请选择填空。
+#include<iostream>
+using namespace std;
+
+void main()
+        {
+                int n,sum=0;
+                n=2345;
+                do{
+                        sum=sum+ （ ① ） ;
+                        n=  n/10  ;
+                }while(n);
+                cout<<"sum="<<sum<<endl;
+}
+
+
+6217.下面程序的功能是将从键盘输入的一对数，由小到大排序输出。
+当输入一对相等数时结束循环，①处应选择(  ) 。
+#include<iostream>
+using namespace std;
+
+void main()
+        {
+                int a,b,t;
+                cin>>a>>b;
+                while( ① )///a!=b
+                {
+                        if(a>b) {t=a; a=b; b=t;}
+                        cout<<a<<b;
+                        cin>>a>>b;
+                }
+        }
+
+
+
+以下能正确计算1*2*3*……*10的程序是()。
+i=1;s=1;        
+do{  s=s*i; }while(i<=10);
+
+
+
+
+
+6215.下面程序的运行结果是(  )。
+#include<iostream>
+using namespace std;
+
+void main()
+{  int i,j,a=0;
+   for(i=0;i<2;i++)
+   { 
+      for (j=0; j<4; j++)
+       {  if (j%2)  break;
+          a++;
+        }
+       a++;
+    }
+    cout<<a<<endl;
+}
+
+///4
+
+以下程序的正确运行结果是（    ）。
+
+int fun(int);
+int  main()
+{int a=2,i;
+for(i=0;i<3;i++)
+cout<<fun(a)<<endl;
+cout<<endl;
+}
+int fun(int a)
+{int b=0;
+static int c=3;
+b++;c++;
+return(a+b+c);
+}
+
+///7,8,9
+
+下列程序的输出结果是（    ）。
+
+#include<iostream>
+using namespace std;
+void fun(int &r)
+{r*=2;}
+int main()
+{int n=50;
+fun(n);
+cout<<n<<endl;
+return 0;
+}
+
+
+//100
+
+
+有以下程序，输出结果（    ）。
+
+#include  <iostream.h>
+void main()
+
+{static int b[][3] = { {1,2,3},{4},{5,6} };
+
+b[0][2]=12,b[1][2]=18;
+cout << b[0][0]<<"\t"<<b[1][0] <<"\t"<<*(b[1]+1)<<"\t"<<*(b[1]+2) <<"\n";
+
+cout << b[0][2]+b[1][2]+b[2][2]<< endl;
+
+}
+
+///1,4,0,18
+          30
+
+
+下面程序输出的结果为（    ）。
+
+void fun(int a,int b)
+{int temp;
+temp=a;
+a=b;
+b=temp;
+}
+void main()
+{int m,n;
+m=1;
+n=2;
+fun(m,n);
+cout<<m<<""<<n<<endl;
+}
+
+
+///12
+
+
+
+假定a=3，下列程序的运行结果是（    ）。
+
+
+int fun(int n);
+void main()
+{cout<<"Please input a number:";
+int a,result =0;
+cin>>a;
+result =fun(a);
+cout<< result <<endl;
+}
+int fun(int n)
+{int p=1,result =0;
+for(int i=1;i<=n;i++)
+{p*=i;
+result +=p;
+}
+return result;
+}
+
+
+
+///9
+
+
+以下程序运行后的输出结果是（    ）。
+
+ 
+  int main()
+  { char a[]="abbcabbcabbc";
+   int i =0,j=0,k=0;
+   while(a[i])
+   { if(a[i] =='a')
+    j++;
+    if(a[i]=='b')
+    k++;
+    i++;
+  }    
+ cout<<j<<" "<<k<<endl;
+ return 0;
+}
+
+
+///3 6
+
+
+已知递归函数fun的定义如下：
+
+int fun(int n)
+{ if(n<=1)return 1;//递归结束情况
+  else return n*fun(n-2);//递归
+}
+
+则函数调用语句fun(5)的返回值是（    ）。
+
+
+////15
+
+
+
+程序执行后的输出结果是（    ）。
+
+void main()
+{
+    char flag='c' ;
+    switch(flag)
+{
+case  'a' :cout<<"1" ;
+case  'b' :cout<<"2" ; break;
+case  'c' : cout <<"3" ; 
+default  : cout <<"4" ; break;
+        }
+}
+
+
+///34
+
+
+以下不正确的是（）。
+A.语句for（i=0；；）表示无限循环
+B.for（；；）表示无限循环
+C.         for（）也表示无限循环
+D.while（1）表示无限循环
+
+
+6283.若有说明:int i,j=7,*p;p=&i;则与i=j等价的语句是(   ).
+
+i=*p   *p=*&j;       i= &j    &i = p
+///*p=*&j; 
+
+
+若有以下定义和语句,且0<i<10,则对数组元素地址的正确表示是(   ).
+    int a[ ]={1,2,3,4,5,6,7,8,9,0},*p,i;
+    p=a;
+A.x++    B.&ptr   C.&p[i]    D.&(x+1)
+
+///&p[i]
+
+
+若有以下语句,且0<=k<6,则正确表示数组元素地址的语句是(   ).
+    int x[]={1,9,10,7,32,4},*ptr=x,k=1;
+
+
+x++  &ptr[k]   &ptr   &(x+1)
+///&ptr[k]
+
+
+
+6287.设有以下程序段:
+int a[5]={0},*p,*q;
+p=a;
+q=a;
+则下列选项中,合法的运算是
+
+A.p+q    B.p-q    C.p*q    d.p%q
+
+///B
+
+
+下列语句中正确的是(   ).
+A.char *p="milk"; p[2]='a';
+B.char name[]="Russell", name[2]='s';   ///?
+C.char name[7]="Russell", *p=name; p[2]='a';
+D.      char name[]="Russell", *p=&name[2]; *p='a';
+
+
+下面程序的输出结果是(   ).
+#include<iostream>
+#include<cstring>
+using namespace std;
+
+int main()
+{ 
+char p1[10],p2[10];
+strcpy(p1,"abc"); 
+strcpy(p2,"ABC"); 
+char str[50]= "xyz";
+strcpy(str+2,strcat(p1,p2));
+cout << str;
+return 0;
+}
+
+///xyabcABC
+
+
+6293.下面程序的输出结果是(   ).
+#include<iostream>
+using namespace std;
+int fun(char *);
+int main()
+{
+cout<<fun("hello");
+return 0;
+}
+int fun(char *s)
+{
+char *t=s;
+while(*t!='\0')t++;
+return (t-s);
+}
+
+A.0   B.  5  C. 6  D.systax ERROR
+
+///5
+
+
+6296.下面程序的运行结果是(   ).
+#include <iostream>
+#include <cstring>
+using namespace std;
+int  main( )
+{
+ char s1[10]="abc";
+ char s2[20]="inter";
+ int k=0,j=0;
+ while (s2[k]) k++;
+ while(s1[j])
+    s2[k--]=s1[j++];
+ cout<<s2<<endl;
+}
+
+A.inter  B.abc   C. interabc  D.intcba
+
+///intcba
+
+
+6297.下面程序的运行结果是(   ).
+#include<iomanip.h>
+void main()
+{  int aa[3][3]={{1},{2},{3}},I,*p=&aa[0][0];
+for(I=0;I<2;I++)
+{   if(I==0)
+        aa[I][I+1]=*p+1;
+    else ++p;
+    cout<<*p<<"  ";
+}
+cout<<endl;
+}
+
+
+A.1 1  B.2 1   C.1 2   D.3 1
+
+////1 2
+
+
+6299.下面程序的运行结果是(   ).
+#include<iostream>
+#include<cstring>
+using namespace std;
+void fun(char s[],int k);
+int main(   )
+{   char a[]="abcdef";
+    int n ;
+     
+       n=strlen(a);
+       fun(a,n);
+       cout<<a<<endl;
+return 0;
+}
+   void fun(char s[],int k)
+   {  int x,y;
+      char c;
+      x=0;
+    for(y=k-1;x<y;y--)
+      {  c=s[y];s[y]=s[x];s[x]=c;
+         x++;
+      }
+   }
+
+
+A.fedcba   B.abcdef   C.badcef   D.dcabed
+
+////A
+
+
+
+6300.下面程序的运行结果是(   ).
+#include<iostream>
+using namespace std;
+int fun(int a[],int n)
+{
+   int result=1;
+   for(int i=1;i<n;i++)
+    result=result*a[i];
+   return result;
+}
+void main()
+{
+   int a[3]={3,4,5};
+   cout<<fun(a,3)<<endl;
+}
+
+A.12  B.15   C.20  D.60
+
+///C
+
+
+6304.如int型变量x的初始值为1,变量y和t皆为int型,且表达式y=(t=x,x+=1,t++),则变量y的值为(   ).
+
+////1
+
+6305.设有a、b、c、d、m、n均为int型变量,且a=5、b=6、c=7、d=8、m=2、n=2,
+则逻辑表达式(m=a>b)&&(n=c>d)运算后,n的值为
+
+////2
+
+6306.下面程序的输出结果是(    ).
+#include<iostream>
+using namespace std;
+int  main()
+{int x=1,y=3;
+cout << x++ << ",";
+  x*=y+2;
+cout << x <<"," << y ;
+}
+
+
+///1,10,3
+
+
+6307.设有int x=11;,则表达式(x++*2/3)的值是(   ).
+
+///7
+
+
+6311.设有定义 float x; double y;,则表达式 10+x+y值的数据类型是
+
+///double 
+
+
+
+6312.判断字符型变量ch是否为大写英文字母,应使用表达式
+
+/// ch>='A' && ch<='Z'
+
+
+6315.下列字符串常量表示中,错误的是(   ).
+
+A."\"yes\"or\"No\"  B."\OK!\""   C."abcd\n"  D. "ABCD\r"
+
+
+///A
+
+
+6318.下列字符常量的写法中,错误的是(   ).
+A.'\n'   B.'*'   C.'"'   D.'\a'
+
+///C
+
+
+6322.下列代码段的输出结果是(   ).
+int j=int();
+double d=double();
+cout <<j<<' '<<d<<endl;
+
+A.0 0   B.j d   C.0 0.0    D.不确定
+
+///A
+
+
+
+6346.(x+y)++    is ERROR  exp
+
+
+6356.下面程序的输出结果是(   ).
+#include<iostream>
+using namespace std;
+int main()
+{
+int a=2,b=-1,c=2;
+if (a<b)
+  if (b<0) c=0;
+else c+=1;
+cout <<c<<endl;
+return 0;
+}
+
+A.0   B.1   C.2  D.3
+
+
+///C
+
+6357.下列for语句的循环次数为(   ).
+for(int i=0,x=0;!x&&i<=5;i++)
+{
+  cout<<i;
+}
+
+A.0   B.5   C.6   D.无穷次
+
+
+///C
+
+
+6358.执行下列程序后,输出的结果是(   ).
+int a=-2,b=1;
+while(++a)
+b++;
+cout<<b<<endl;
+
+
+A.4   B.1   C.2   D.3
+
+
+///C
+
+
+6359.下列do-while循环的循环次数是(   ).
+已知:int i=5;
+do
+{
+  cout<<i--<<endl;
+  i--;
+}while (i!=0);
+
+
+A.0   B.2   C.5   D.无限次
+
+///D
+
+
+6360.若int a=6,则执行完下列语句后,a的值为(   ).
+if (a>6)
+  a-=5;
+a+=5;
+
+A.1   B.6   C.10   D.11
+
+
+///D
+
+
+6361.执行语句序列
+int n;
+cin>>n;
+switch(n)
+{  case 1:
+   case 2:cout<<'1';
+   case 3:
+   case 4:cout<<'2';break;
+   default:cout<<'3';
+}
+时,若键盘输入1,则屏幕显示(   ).
+
+
+A.1   B.2   C.3  D.12
+
+
+//D
+
+
+
+6362.下面程序段的运行结果是(   ).
+#include <iostream>
+using namespace std;
+int main()
+{ 
+int t, a, b, c;
+a=1;b=2;c=2;
+while(a<b<c)
+{ t=a;a=b;b=t;c--;}
+cout << a << "," << b << "," << c;
+return 0;
+}
+
+
+A.1,2,0   B.2,1,0   C.1,2,1   D.2,1,1
+
+
+///A
+
+
+6363.下面程序的运行结果为(   ).
+#include<iostream>
+using namespace std;
+void main()
+{  int a,x;
+   for(a=0,x=0;!x&&a<=10;a++)
+   {
+     a++;
+   }
+    cout<<a<<endl;
+}
+
+A.10   B.11   C.12   D.0
+
+
+//C
+
+6364.执行下列语句后,程序的输出结果是(   ).
+#include<iostream>
+using namespace std;
+int main()
+{
+int n=10;
+while(n>7){
+n--;
+cout<<n<<',';
+}
+cout<<endl;
+return 0;
+}
+
+
+A.10,9,8,   B.9,8,7,   C.10,9,8,7,   D.9,8,7,6,
+
+
+///B
+
+
+6366.下列语句将输出字符'*'的个数为(   ).
+int i=10;
+while(1)
+{
+i--;
+if(i==0)
+break;
+cout<<'*';
+}
+
+A.11    B.10   C.9   D.8
+
+////C
+
+
+6368.#include <iostream>
+using namespace std;
+int main()
+{
+  int x=15;
+  while(x>10&&x<50)
+  {
+    x++;
+    if(x/3)
+    { 
+      x++; break;        
+    }
+  }
+  cout<<x<<endl;
+  return 0;
+}
+执行后的输出结果是
+
+///17
+
+
+*****6370.下面程序的运行结果是(   ).
+#include<iostream>
+using namespace std; 
+void main()
+{ 
+   int i=1; 
+   while(i<=8)
+   if (++i%3!=2)continue; 
+   else cout<<i<<" ";
+}
+
+
+A.2 5   B.3 6   C.2 5 8   D.3 6 9
+
+
+///C
+
+
+
+6371.执行下列语句:
+#include<iostream>
+using namespace std;
+int main()
+{
+int a=3;
+if(a=5)
+cout<<a+1<<endl;
+else
+cout<<a<<endl;
+return 0;
+}
+程序的输出是(   ).
+
+
+A.3   B.4   C.5   D.6
+
+
+///D
+
+
+6373.下面程序的运行结果是(   ).
+#include<iostream>
+using namespace std;
+void main (void)
+{        int I=0,j=0,k=0,m;
+                for(m=0;m<4;m++)
+                switch(m)
+                {        case 0:I=m++;
+                        case 1:j=m++;
+                        case 2:k=m++;
+                        case 3:m++;
+                }
+                cout<<m<<'\n';
+}
+
+
+A.4   B.5   C.3   D.2
+
+
+///B
+
+
+
+6376.下列程序的输出结果是(   ).
+include <iostream>
+using namespace std;
+int main()
+{
+  int s;
+  for (int k=2; k<6;k+=2){
+    s=1;
+    for (int j=k;j<6;j++) 
+    s+=j;
+  }
+  cout << s << endl;
+}
+
+
+A.9  B.10  C.11   D.1
+
+
+////B
+
+
+6378.如要求在if后括号中的表达式表示a不等于0的时候的值为"真",
+则能正确表示这一关系的表达式为(   ).
+
+A.a<>0   B.!a   C.a=0    D.a    ////D   即if(a)
+
+
+
+6379.下面关于break语句的描述中,不正确的是(   ).
+
+A.break可以用于循环体内 
+B.break语句可以在for循环语句中出现多次
+C.break语句可以在switch语句中出现多次
+D.一个break语句就可以跳出多重循环
+
+
+///D
+
+
+6382.若磁盘上已存在某个文本文件,其全路径文件名为 d:\ncre\test.txt ,下列语句中一定能
+打开该文件的是（  ）
+
+A.ifstream file ; file.open("d:\ncre\test.txt");
+B.ifstream file; file.open("d:\\ncre\\test.txt");
+C.ifstream file; file.open("test.txt");
+D.ifstream file  file.open("d:\\test.txt");
+
+
+///B
+
+
+6383.下列语句中不是死循环的是(   ).
+
+A.int i=10;
+       while (1)
+       {
+             i--;
+             if(i==1)break;
+        }
+B.for(int i=1;i<10;i++)
+       {
+              i--;
+       }
+C.int i=0;
+       do{
+               i++;
+       }while(i>=0);
+
+D.int i=1;
+  for(;;)i=i+1;
+
+////A
+
+
+6397.下面程序的输出结果是(   ).
+#include <iostream>
+using namespace std;
+int a;
+int fun();
+void main()
+{
+        extern int a;
+        int b;
+        a=100;
+        b=fun();
+        cout <<b<<endl;
+}
+int fun()
+{
+        extern int a;
+        return (10*a);
+
+}
+
+A.10   B.100   C.1000   D.10000
+
+
+///C
+
+
+6398.下列程序的输出结果是(   ).
+#include <iostream>
+using namespace std;
+int f()
+{
+        static int I=0;
+        I=1;
+        int s=1;
+        s+=I;
+        I++;
+        return s;
+}
+int  main()
+{
+        int I,a=0;
+        for(I=0;I<2;I++)
+                a+=f();
+        cout <<a<<endl;
+return 0;
+}
+
+
+A.3    B.4   C.5   D.6
+
+////B
+
+
+6399.执行下列程序语句后,屏幕输出为(   ).
+#include<iostream>
+using namespace std;
+int n;
+int main()
+{
+int n=3;
+n++;
+::n++;
+cout<<::n<<endl;
+return 0;
+}
+
+A.3   B.4   C.2   D.1
+
+
+///D
+
+
+6400.下面程序的输出结果是(   ).
+#include <iostream>
+using namespace std;
+void try1(int,int,int,int);
+void main()
+{
+        int x,y,z,r;
+        x=1;
+        y=2;
+        try1(x,y,z,r);
+        cout<<r<<endl;
+}
+void try1(int x,int y,int z,int r)
+{
+        z=x+y;
+        x=x*y;
+        y=y*y;
+        r=z+x+y;
+}
+
+
+A.8   B.10    C.18   D.不确定
+
+////D
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+
+
+
+
+
+
+
+
+
