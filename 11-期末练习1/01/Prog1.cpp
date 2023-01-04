@@ -22,34 +22,31 @@ int main()
         /**********Program**********/
     cin>>s1;
     cin>>s2;
-
-    int k,flag;
-    int i=0,n=0;
-    while(s1[i]!='\0')
+    int flag,k;
+    int n=0;
+    int i=0;
+    while (s1[i]!='\0') //当读取到s1末尾时结束循环
     {
-        k=i;
-        flag=1;
-        for(int j=0;s2[j]!='\0';j++)
+        k=i;//k用于s1与s2比较
+        flag=1;//flag用于判断s1从k开始的子串是否与s2相同，默认相同
+        for (int j=0;s2[j]!='\0';++j)//读到字符串s2末尾结束循环
         {
-            if(s1[j]!=s2[j])
-            {
+            if (s1[k]!=s2[j]){
                 flag=0;
-                break;
+                break;//字符串不匹配，结束循环，重新匹配下一个子串
             }
+            k++;
         }
-        if(flag==1)
-        {
+        if (flag){
             cout<<i<<endl;
             n++;
-            i=k;
-
+            i=k;//输出并重置i
         }
-        else 
+        else
             i++;
     }
-    if(n==0)
+    if (n==0)
         cout<<-1<<endl;
-
     /**********  End  **********/
     return 0; 
 }
