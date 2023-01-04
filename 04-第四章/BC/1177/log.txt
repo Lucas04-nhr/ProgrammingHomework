@@ -1,0 +1,9 @@
+Prog1_.cpp
+C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\INCLUDE\xlocale(323) : warning C4530: 使用了 C++ 异常处理程序，但未启用展开语义。请指定 /EHsc
+Prog1_.cpp(22) : warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+Prog1_.cpp(23) : warning C4244: “+=”: 从“double”转换到“int”，可能丢失数据
+Microsoft (R) Incremental Linker Version 10.00.30319.01
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+/out:Prog1_.exe 
+Prog1_.obj 
