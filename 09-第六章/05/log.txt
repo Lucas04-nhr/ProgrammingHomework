@@ -1,0 +1,14 @@
+Prog1_.cpp
+C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\INCLUDE\xlocale(323) : warning C4530: 使用了 C++ 异常处理程序，但未启用展开语义。请指定 /EHsc
+Prog1_.cpp(82) : warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+        C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\INCLUDE\string.h(105) : 参见“strcpy”的声明
+Prog1_.cpp(84) : warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+        C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\INCLUDE\string.h(105) : 参见“strcpy”的声明
+Prog1_.cpp(86) : warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+        C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\INCLUDE\string.h(105) : 参见“strcpy”的声明
+Microsoft (R) Incremental Linker Version 10.00.30319.01
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+/out:Prog1_.exe 
+Prog1_.obj 
+LINK : fatal error LNK1104: 无法打开文件“Prog1_.exe”

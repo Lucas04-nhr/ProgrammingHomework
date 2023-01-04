@@ -1,0 +1,3 @@
+Prog1_.cpp
+C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\INCLUDE\xlocale(323) : warning C4530: 使用了 C++ 异常处理程序，但未启用展开语义。请指定 /EHsc
+Prog1_.cpp(41) : error C2059: 语法错误:“return”
