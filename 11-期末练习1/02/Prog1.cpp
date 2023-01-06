@@ -14,19 +14,33 @@
 #include <iostream>
 using namespace std;
 /**********Program**********/
-  
+int choose(const int* iScore, int iNumber, int* iBelow){
+    int iSum=0;
+    for (int i = 0; i < iNumber; ++i) {
+        iSum+=iScore[i];
+    }
+    int iAverage=iSum/iNumber;
+    int iFlag=0;
+    for (int j = 0; j < iNumber; ++j) {
+        if (iScore[j]<iAverage){
+            iBelow[iFlag]=iScore[j];
+            iFlag++;
+        }
+    }
+    return iFlag;
+}
 
 /**********  End  **********/
 
-void main(void)
+int main()
 {
-        const int N=9;
-        int score[N]={10,20,30,40,50,60,70,80,90};
-        int below[N]={-1,-1,-1,-1,-1,-1,-1,-1,-1};
-        int number,i;
-        number=choose(score,N,below);
-        cout<<"低于平均分的人数="<<number<<endl;
-        cout<<"低于平均分的分数=";
-        for(i=0;i<number;i++) cout<<below[i]<<"  ";
-        cout<<endl;
+    const int N=9;
+    int score[N]={10,20,30,40,50,60,70,80,90};
+    int below[N]={-1,-1,-1,-1,-1,-1,-1,-1,-1};
+    int number,i;
+    number=choose(score,N,below);
+    cout<<"低于平均分的人数="<<number<<endl;
+    cout<<"低于平均分的分数=";
+    for(i=0;i<number;i++) cout<<below[i]<<"  ";
+    cout<<endl;
 }
