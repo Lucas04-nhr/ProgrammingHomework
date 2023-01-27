@@ -17,12 +17,36 @@
 using namespace std;
 int main( )
 {
-        
+
 
 /**********Program**********/
-        
+    int score[100]={0};
+    int i=0;
+    cout<<"输入成绩且负数表示结束"<<endl;
+    do {
+        cin>>score[i];
+        i++;
+    } while (score[i-1]>=0);
+    cout<<"共有"<<i-1<<"人"<<endl<<"成绩如下"<<endl;
+    for (int j = 0; j < i-1; ++j) {
+        cout<<score[j]<<"  ";
+    }
+    cout<<endl;
+    int iMax= score[0];
+    for (int j = 0; j < i-1; ++j)
+        if(iMax<=score[j])
+            iMax=score[j];
+    cout<<"最高分"<<iMax<<endl;
+    int iSum=0;
+    double dAverage;
+    for (int j = 0; j < i; ++j) {
+        iSum+=score[j];
+    }
+    double dSum=iSum;
+    dAverage=double(dSum/(i-1.0));
+    cout<<"平均分"<<dAverage<<endl;
 
 /**********  End  **********/
-        return 0;
+    return 0;
 }
 
