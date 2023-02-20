@@ -16,7 +16,23 @@
 using namespace std;
 
 /**********Program**********/
-
+class Point{
+public:
+        Point(){
+                x=y=0;
+        }
+        double r(){
+                return sqrt(x*x+y*y);
+        }
+        double theta(){
+                return atan(y/x);
+        }
+        double distance(const Point &p){
+                return sqrt((x-p.x)*(x-p.x)+(y-p.y)*(y-p.y));
+        }
+private:
+        doublex,y;
+};
 /**********  End  **********/
  void main()
 {
