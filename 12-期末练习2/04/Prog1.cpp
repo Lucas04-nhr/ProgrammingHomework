@@ -31,5 +31,21 @@ int main()
           return 0; 
 }
         /**********Program**********/
-
-    /**********  End  **********/
+void print(int n, char c,int* p){
+        p+=n*5;
+        int i,j,r,w,t;
+        for(i=0;i<5;i++){
+                w=8;
+                t=p[i];
+                for(j=0;j<4;j++){
+                        r=t/w;
+                        if(r==1)
+                                cout<<c;
+                        else
+                                cout<<endl;
+                        t=t%w;
+                        w=w/2;
+                }
+                cout<<endl;
+        }
+    /**********  End  **********/}

@@ -33,7 +33,16 @@ int main()
         cin.getline(searchname,20);  
         
         /**********Program**********/
-        
+        int i, look=0, position;
+        for(i=0;i<10;i++)
+                if(strcmp(name[i],searchname)==0){
+                        look=1;
+                        position=i+1;
+                }
+        if(look==1)
+                cout<<searchname<<"存在，其位置是："<<position<<endl;
+        else
+                cout<<"对不起，"<<searchname<<"不存在！"<<endl;
         /**********  End  **********/
                 return 0; 
 }

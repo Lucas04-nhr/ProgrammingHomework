@@ -20,8 +20,33 @@
 using namespace std;
 
 /**********Program**********/
+class Clock{
 
+private:
+        int hour,minute,sec;
+public:
+        Clock(int h,int m,int s){
+                hour=h;
+        }
+        double getHour(void){
+                return hour;
+        }
+        double getMinute(void){
+                return minute;
+        }
+        void go(void);
+}
 
+void Clock::go(void){
+        sec++;
+        if(sec==60){
+                sec=0;minute++;
+                if(minute==60){
+                        minute=0;
+                        hour++;
+                }
+        }
+}
 /**********  End  **********/
 void display(Clock ck)
 {

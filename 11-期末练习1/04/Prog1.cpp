@@ -13,9 +13,42 @@
 using namespace std;
 
 /**********Program**********/
+void sort(double* score,int* id,int n){
+    int i,j,max,tempID;
+    double temp;
+    for (int i = 0; i < n-1; ++i){
+        max=i;
+        for (int j = 0; j < n; ++j)
+            if (score[j]>score[max])
+                max=j;
+
+        temp=score[i];
+        score[i]=score[max];
+        score[max]=temp;
 
 
+        tempID=id[i];
+        id[i]=id[max];
+        id[max]=tempID;
+    }
+}
 
+double average(double* score,int n){
+    double avg=0;
+    int i;
+    for(i=0;i<n;i++)
+        avg+=score[i];
+    avg/=n;
+    return avg;
+}
+
+int lessAverage(double* score,int n){
+    int i,count=0;
+    for (i=0;i<n;i++)
+        if(score[i]<average(score,n))
+            count++;
+    return count;
+}
 
 
 /**********  End  **********/

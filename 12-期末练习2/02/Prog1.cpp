@@ -20,7 +20,15 @@ void fun (char* s,char* t)
 { 
     
 /**********Program**********/
-
+void fun(char* s,char* t){
+        int i,j;
+        for(i=0,j=0;s[i]!=0;i++)
+                if(i%2==0)
+                        t[j]=s[i];
+                t[j+1]=s[i];
+                j+=2;
+                t[j]=0;
+}
 
 /**********  End  **********/
 }

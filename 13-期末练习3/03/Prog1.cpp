@@ -37,7 +37,49 @@ public:
         ~opera();     //戏剧下线时统计戏剧的票房
 };
 /**********Program**********/
+opera::opera(){
+        strcpy(name,"未命名");
+        int s[]={20,100,240,300}
+        for(int i=0;i<4;i++){
+                ts[i]=s[i];
+                es[i]=ts[i];
+                ps[i]=0;
+        }
+        income=0;
+}
 
+void opera::set_name(char* n){
+        strcpy(name,n);
+}
+
+void opera::set_ps(int p[]){
+        for(int i=0;i<4;i++)
+                ps[i]=p[i];
+}
+
+void opera::booking(int g,int n){
+        if(es[g]>=n){
+                es[g]-=n;
+                income+=n*ps[g];
+        }
+        else
+                cout<<"余票("<<es[g]<<")不足，购买失败"<<endl;
+}
+
+void opera::refund(int g,int n){
+        es[g]+=n;
+        icome-=ps[g]*n;
+}
+
+opera::~opera(){
+        cout<<name<<"的票房如下："<<endl;
+        cout<<setw(20)<<"包厢"<<setw(10)<<"一等座"
+            <<setw(10)<<"二等座"<<setw(10)<<"三等座"<<endl;
+            cout<<setw(10)<<"售出";
+    for(int i=0;i<4;i++)
+        cout<<setw(10)<<ts[i]-es[i];
+    cout<<endl;    
+}
 
 /**********  End  **********/
 void opera::print()

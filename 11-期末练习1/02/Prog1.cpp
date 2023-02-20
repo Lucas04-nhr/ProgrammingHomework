@@ -15,21 +15,15 @@
 using namespace std;
 /**********Program**********/
 int choose(const int* iScore, int iNumber, int* iBelow){
-    int iSum=0;
-    for (int i = 0; i < iNumber; ++i) {
-        iSum+=iScore[i];
+int i,k=0,c=0;
+double avg=0;
+for(i=0;i<n;i++){
+    if (score[i]<avg){
+        below[k++]=score[i];
+        c++;
     }
-    int iAverage=iSum/iNumber;
-    int iFlag=0;
-    for (int j = 0; j < iNumber; ++j) {
-        if (iScore[j]<iAverage){
-            iBelow[iFlag]=iScore[j];
-            iFlag++;
-        }
-    }
-    return iFlag;
+    return c;
 }
-
 /**********  End  **********/
 
 int main()

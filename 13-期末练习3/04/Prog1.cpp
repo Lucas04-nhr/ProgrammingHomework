@@ -29,8 +29,50 @@ void rep(int t[],int s,int &m, int &n);
 void sort(int t[],int s,int p[]);
 
 /**********Program**********/
+int check(int t[],int s,int b[]){
+  double sum=0,avg;
+  int i,j=0;
+  for(i=0;i<s;i++)
+    sum+=t[i];
+  avg=sum/s;
+  for(i=0;i<s;i++)
+    if(t[i]<avg){
+      b[j]=i;
+      j++;
+    }
+    return j;
+}
 
+void rep(int t[],int s,int &m;int &n){
+  int i;
+  m=0;
+  n=0;
+  for(i=0;i<s;i++){
+    if(t[i]>t[m])
+      m=i;
+    if(t[i]<t[n])
+      n=i;
+  }
+}
 
+void sort(int t[],int s,int p[]){
+  int i,j,k;
+  for(i=0;i<s;i++)
+    if(p[j]<p[j-1]){
+      int mp,mt;
+
+      mp=p[j];
+      p[j]=p[j-1];
+      p[j-1]=mp;
+
+      mt=t[j-1];
+      t[j-1]=t[j];
+      t[j-1]=mt;
+      k=1;
+    }
+    if(k==0)
+      break;
+}
 /**********  End  **********/
 
 

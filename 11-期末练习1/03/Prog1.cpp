@@ -24,7 +24,39 @@
 #include <iostream>
 using namespace std;
 /**********Program**********/
+class Renminbi{
+private:
+        int Yuan ,Jiao,Fen;
+public:
+        Renminbi(double Money);
+        int show(int Category);
+};
 
+Renminbi::Renminbi(double Money = 0){
+        double a,b,c,d,e,f;
+        Yuan=int(Money);
+        Jiao=int((Money-Yuan)*10);
+        Fen=it((Money-Yuan-(double)Jiao/10+0.005)*100);
+}
+
+int Renminbi::show(int Category){
+        int RMB;
+        switch(Category){
+        case 0:
+                RMB=Yuan*100+Jiao*10+Fen;
+                break;
+        case 1:
+                RMB=Yuan;
+                break;
+        case 2:
+                RMB=Jiao;
+                break;
+        case 3:
+                RMB=Fen;
+                break;
+        }
+        return RMB;
+}
 /**********  End  **********/
 
 
