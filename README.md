@@ -27,7 +27,7 @@ If you like my work, you can "Follow" my account or "Star" this repository.
 
 ---
 
-**Payment method:**
+**Payment methods:**
 
 - [WeChat](./image/WeChat.jpg)
 - [Alipay](./image/Alipay.jpg)
